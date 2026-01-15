@@ -17,8 +17,9 @@ body.dark-mode footer {
   background: var(--bg-muted);
 }
 
-body.dark-mode a {
-  color: var(--accent);
+body.dark-mode a,
+body.dark-mode .btn {
+  color: white;
 }
 
 body.dark-mode input,
@@ -421,7 +422,8 @@ body.dark-mode .footer-bottom {
 
   nav.show-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     background: white;
     width: 100%;
     padding: 16px 20px;

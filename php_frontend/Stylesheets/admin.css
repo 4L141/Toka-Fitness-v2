@@ -1,0 +1,36 @@
+/* admin.css */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.admin-container {
+    padding: 40px;
+}
+
+.admin-container h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--bg-muted);
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}

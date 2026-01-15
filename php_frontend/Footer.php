@@ -26,3 +26,5 @@
   </div>
 </footer>
 <script src="Scripts/theme.js"></script>
+</body>
+</html>

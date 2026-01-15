@@ -25,54 +25,43 @@ if ($response["Status"] !== "success") {
 $users = $response["UsersList"];
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Panel</title>
-    <style>
-        body { background: lightblue; font-family: Arial; }
-        table { border-collapse: collapse; width: 80%; margin: 20px auto; }
-        th, td { border: 1px solid black; padding: 10px; text-align: center; }
-        th { background: #444; color: white; }
-        .btn { padding: 5px 10px; border: none; cursor: pointer; }
-        .update { background: green; color: white; }
-        .delete { background: red; color: white; }
-    </style>
-</head>
-<body>
-
-<h2 style="text-align:center;">Admin Panel — User Management</h2>
-
-<table>
-    <tr>
-        <th>ID</th><th>First</th><th>Last</th><th>Email</th>
-        <th>Registered</th><th>Admin?</th><th>Actions</th>
-    </tr>
-
-    <?php foreach ($users as $u): ?>
-    <tr>
-        <td><?= $u["user_id"] ?></td>
-        <td><?= $u["first_name"] ?></td>
-        <td><?= $u["last_name"] ?></td>
-        <td><?= $u["email"] ?></td>
-        <td><?= $u["reg_date"] ?></td>
-        <td><?= $u["is_admin"] ? "Yes" : "No" ?></td>
-
-        <td>
-            <form action="update_user.php" method="post" style="display:inline;">
-                <input type="hidden" name="user_id" value="<?= $u['user_id'] ?>">
-                <button class="btn update">Update</button>
-            </form>
-
-            <form action="delete_user.php" method="post" style="display:inline;">
-                <input type="hidden" name="user_id" value="<?= $u['user_id'] ?>">
-                <button class="btn delete">Delete</button>
-            </form>
-        </td>
-    </tr>
-    <?php endforeach; ?>
-
-</table>
-
-</body>
-</html>
+<?php $pageTitle = 'Admin Panel - Toka Fitness'; include 'header.php'; ?>
+<link rel="stylesheet" href="Stylesheets/admin.css">
+    <div class="admin-container">
+        <h1>Admin Panel — User Management</h1>
+        <a href="create_user.php" class="btn">Create User</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Registered</th>
+                <th>Admin?</th>
+                <th>Actions</th>
+            </tr>
+            <?php foreach ($users as $u): ?>
+            <tr>
+                <td><?= $u["user_id"] ?></td>
+                <td><?= $u["first_name"] ?></td>
+                <td><?= $u["last_name"] ?></td>
+                <td><?= $u["email"] ?></td>
+                <td><?= $u["reg_date"] ?></td>
+                <td><?= $u["is_admin"] ? "Yes" : "No" ?></td>
+                <td>
+                    <div class="btn-group">
+                        <form action="update_user.php" method="post">
+                            <input type="hidden" name="user_id" value="<?= $u['user_id'] ?>">
+                            <button class="btn">Update</button>
+                        </form>
+                        <form action="delete_user.php" method="post">
+                            <input type="hidden" name="user_id" value="<?= $u['user_id'] ?>">
+                            <button class="btn">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<?php include 'footer.php'; ?>
