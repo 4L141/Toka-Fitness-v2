@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toxa Fitness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h2>Toxa Fitness</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Programs</a>
+    <a href="#">Trainers</a>
+    <a href="#">Contact</a>
+  </nav>
+  <a class="btn" href="#">Join</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>BODY & MIND</h1>
+    <p>Join thousands achieving their fitness goals with expert trainers, state-of-the-art facilities, and personalized programs.</p>
+    <a class="btn" href="#">Start Free Trial</a>
+  </div>
+  <img src="https://via.placeholder.com/450x280" alt="Gym Image" />
+</section>
+
+<section class="stats">
+  <div><strong>5000+</strong><br>Active Members</div>
+  <div><strong>98%</strong><br>Success Rate</div>
+  <div><strong>15+</strong><br>Expert Trainers</div>
+  <div><strong>4.9</strong><br>Rating</div>
+</section>
+
+<h2 class="section-title">Daily Motivation</h2>
+<div class="motivation">
+  <div>"Your body can stand almost anything. It’s your mind you have to convince."</div>
+  <div>"The only bad workout is the one that didn’t happen."</div>
+  <div>"Strength doesn’t come from what you can do; it comes from overcoming the things you once thought you couldn’t."</div>
+</div>
+
+<h2 class="section-title">World-Class Facilities</h2>
+<div class="facilities">
+  <div class="facility-box">
+    <img src="https://via.placeholder.com/300x200" alt="Cardio Zone">
+    <h3>Premium Cardio Zone</h3>
+    <p>Top-tier cardio equipment for maximum endurance improvement.</p>
+  </div>
+  <div class="facility-box">
+    <img src="https://via.placeholder.com/300x200" alt="Strength Area">
+    <h3>Strength Training Area</h3>
+    <p>High-quality machines and free weights for serious strength building.</p>
+  </div>
+</div>
+
+<h2 class="section-title">Success Stories</h2>
+<div class="success">
+  <div class="card">
+    <h4>Sarah Johnson</h4>
+    <p>“Amazing trainers and supportive atmosphere! I reached my fitness goal in 3 months.”</p>
+  </div>
+  <div class="card">
+    <h4>Mike Carr</h4>
+    <p>“Best gym experience I’ve ever had. Equipment is modern and super clean.”</p>
+  </div>
+  <div class="card">
+    <h4>Elena Rodriguez</h4>
+    <p>“Their personalized plan helped me change my life completely.”</p>
+  </div>
+</div>
+
+<footer>
+  <p>Join Toxa Fitness today and get your first week absolutely free!</p>
+  <a class="btn" href="#">Start Free Trial</a>
+</footer>
+
+</body>
+</html>

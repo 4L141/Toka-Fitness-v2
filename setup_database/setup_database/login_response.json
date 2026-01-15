@@ -1,0 +1,8 @@
+{
+  "Status": "success",
+  "Message": "Login successful",
+  "User": {
+    "user_id": 1,
+    "email": "admin",
+  }
+}

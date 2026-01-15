@@ -1,0 +1,170 @@
+/* pricing.css — page-specific styles & dark-mode refinements */
+
+/* Root adjustments (page-specific) */
+.pricing-hero {
+  background: linear-gradient(120deg, rgba(27,38,59,0.92), rgba(13,27,42,0.92));
+  color: #fff;
+  padding: 64px 0;
+  text-align: center;
+}
+.pricing-hero .lead {
+  max-width: 720px;
+  margin: 12px auto 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+}
+
+/* Pricing cards */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 36px 0 18px;
+  align-items: stretch;
+}
+
+.plan {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(2,8,23,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+  border: 1px solid rgba(11,20,34,0.06);
+}
+
+/* Highlight popular plan */
+.plan--popular {
+  transform: translateY(-8px);
+  border: 2px solid rgba(27,38,59,0.12);
+  box-shadow: 0 16px 40px rgba(2,8,23,0.12);
+}
+
+/* Plan head */
+.plan-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.plan-head h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.plan-head .sub {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Price */
+.plan-price {
+  margin: 18px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.price {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.period {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Features list */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  gap: 10px;
+  color: #444;
+}
+.features li::before {
+  content: "✓";
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+/* CTA */
+.plan-cta {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Hover interactions */
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(2,8,23,0.14);
+}
+
+/* Comparison table */
+.pricing-compare {
+  margin: 28px 0 40px;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+.compare-table th,
+.compare-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  text-align: left;
+}
+.compare-table thead th {
+  background: rgba(27,38,59,0.04);
+  font-weight: 700;
+}
+
+/* CTA Banner */
+.pricing-cta {
+  background: linear-gradient(180deg, rgba(27,38,59,0.06), rgba(27,38,59,0.02));
+  padding: 26px 0 48px;
+  text-align: center;
+}
+.pricing-cta p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* Dark mode refinements (works with your global .dark-mode) */
+.dark-mode .plan {
+  background: #15181c !important;
+  border-color: #2b333b !important;
+  color: #d6dbe0;
+  box-shadow: none;
+}
+.dark-mode .plan--popular {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.dark-mode .compare-table thead th {
+  background: rgba(255,255,255,0.02);
+}
+.dark-mode .pricing-hero {
+  background: linear-gradient(120deg, rgba(6,12,18,0.92), rgba(13,20,28,0.92));
+}
+.dark-mode .features li::before { color: #58a6ff; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .pricing-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .pricing-cards { grid-template-columns: 1fr; padding: 0 10px; }
+  .price { font-size: 28px; }
+  .pricing-hero { padding: 40px 12px; }
+  .compare-table { min-width: 520px; }
+}

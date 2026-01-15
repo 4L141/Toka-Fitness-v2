@@ -1,0 +1,186 @@
+/* ------------------------------
+   FAQ PAGE STYLES
+--------------------------------*/
+
+/* Page Hero / Header Banner */
+.faq-hero {
+  background: #eef3f8;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.faq-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.faq-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Section Titles */
+.faq-section-title {
+  text-align: center;
+  font-size: 22px;
+  margin: 50px 0 20px;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+/* FAQ Accordion Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+/* Accordion Block */
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #dfe6ee;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-question {
+  padding: 18px 20px;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question i {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  transition: max-height 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 15px 20px 20px;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+/* Getting Started Tips */
+.getting-started {
+  background: #f6f9fc;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.getting-started h2 {
+  color: #0d1b2a;
+  font-size: 28px;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.tips-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  border: 1px solid #e6edf3;
+}
+
+.tip-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0d1b2a;
+}
+
+.tip-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Still Have Questions Section */
+.still-questions {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.still-questions h2 {
+  font-size: 26px;
+  color: #0d1b2a;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.still-questions p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #1b263b;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #162033;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+
+@media (max-width: 768px) {
+  .faq-hero h1 {
+    font-size: 32px;
+  }
+
+  .faq-hero p {
+    font-size: 16px;
+  }
+
+  .tip-card {
+    width: 90%;
+  }
+
+  .tips-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
