@@ -1,19 +1,15 @@
-<html>
-<body style="background-color: lightblue;">
-    <form method="post">
-        <h2>Login</h2>
-        Enter email:<br>
-        <input type="text" name="email" required /><br><br>
-
-        Enter password:<br>
-        <input type="password" name="password" required /><br><br>
-
-        <input type="submit" name="login" value="Log In">
-		
-		<a class="btn" href="SignUp.php">Back</a>
-    </form>
-</body>
-</html>
+<?php $pageTitle = 'Login - Toka Fitness'; include 'header.php'; ?>
+<link rel="stylesheet" href="Stylesheets/login.css">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="post">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" name="login" class="btn">Log In</button>
+            <a href="ForgotPassword.php" class="forgot-password">Forgot Password?</a>
+        </form>
+    </div>
+<?php include 'footer.php'; ?>
 
 <?php
 if (isset($_POST['login'])) {

@@ -1,20 +1,16 @@
-<html>
-<body style="background-color: lightblue;">
-    <form method="post">
-        A program to add user info using PHP<br><br>
-        Enter first name:
-        <input type="text" name="first_name" required /><br><br>
-        Enter last name:
-        <input type="text" name="last_name" required /><br><br>
-        Enter email address:
-        <input type="email" name="email" required /><br><br>
-        Enter password:
-        <input type="password" name="password" required /><br><br>
-        <input type="submit" name="signup" value="Sign Up">
-		<a class="btn" href="LogIn.php">LogIn</a>
-    </form>
-</body>
-</html>
+<?php $pageTitle = 'Sign Up - Toka Fitness'; include 'header.php'; ?>
+<link rel="stylesheet" href="Stylesheets/signup.css">
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" name="signup" class="btn">Sign Up</button>
+        </form>
+    </div>
+<?php include 'footer.php'; ?>
 
 <?php
 if (isset($_POST['signup'])) {
