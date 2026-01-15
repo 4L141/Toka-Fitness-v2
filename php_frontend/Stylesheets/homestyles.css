@@ -28,6 +28,15 @@ body.dark-mode textarea {
   border-color: #30363d;
 }
 
+/* Additional dark mode styles for unstyled pages */
+body.dark-mode .page-title {
+  color: var(--text);
+}
+
+body.dark-mode .page-content p {
+  color: var(--text-muted);
+}
+
 /* =========================================================
    THEME TOGGLE
 ========================================================= */

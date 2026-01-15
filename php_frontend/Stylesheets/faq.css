@@ -184,3 +184,30 @@
     align-items: center;
   }
 }
+
+/* Dark mode styles */
+body.dark-mode .faq-hero,
+body.dark-mode .getting-started {
+  background: var(--bg-muted);
+}
+
+body.dark-mode .faq-hero h1,
+body.dark-mode .faq-section-title,
+body.dark-mode .getting-started h2,
+body.dark-mode .tip-card h3,
+body.dark-mode .still-questions h2 {
+  color: var(--text);
+}
+
+body.dark-mode .faq-hero p,
+body.dark-mode .faq-answer p,
+body.dark-mode .tip-card p,
+body.dark-mode .still-questions p {
+  color: var(--text-muted);
+}
+
+body.dark-mode .faq-item,
+body.dark-mode .tip-card {
+  background: var(--card-bg);
+  border-color: #30363d;
+}

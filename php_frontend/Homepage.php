@@ -11,7 +11,6 @@
 <body>
 
 <!-- THEME BUTTON (only ONE body tag now) -->
-<button id="themeToggle" class="theme-toggle">Toggle Theme</button>
 
 <section class="hero" style="
     height: 500px;
@@ -83,7 +82,6 @@
 </div>
 
 	<script src = "Scripts/Hamburger.js"></script>
-	<script src="Scripts/theme.js"></script>
 	<script src="Scripts/Motivation.js"></script>
 
 <?php include 'footer.php'; ?>

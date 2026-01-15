@@ -205,3 +205,16 @@
   .about-copy h1 { font-size: 22px; }
   .lead { font-size: 15px; }
 }
+
+/* Dark mode styles */
+body.dark-mode .value-card,
+body.dark-mode .trainer-card {
+  background: var(--card-bg);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .mission-text,
+body.dark-mode .trainer-body p,
+body.dark-mode .timeline-content p {
+  color: var(--text-muted);
+}

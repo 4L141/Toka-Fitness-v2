@@ -28,13 +28,11 @@ const Theme = {
 
   enableDarkMode(save = true) {
     this.body.classList.add("dark-mode");
-    if (this.toggleBtn) this.toggleBtn.textContent = "☀️";
     if (save) localStorage.setItem("darkTheme", "enabled");
   },
 
   disableDarkMode(save = true) {
     this.body.classList.remove("dark-mode");
-    if (this.toggleBtn) this.toggleBtn.textContent = "🌙";
     if (save) localStorage.setItem("darkTheme", "disabled");
   }
 };

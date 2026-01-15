@@ -23,5 +23,6 @@
     <a href="FAQ.php">FAQ</a>
   </nav>
 
+  <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
   <a class="btn" href="SignUp.php">LogIn/SignUp</a>
 </header>

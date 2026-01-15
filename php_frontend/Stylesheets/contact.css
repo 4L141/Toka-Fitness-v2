@@ -175,3 +175,15 @@ input, textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* Dark mode styles */
+body.dark-mode .contact-card,
+body.dark-mode .faq-card {
+  background: var(--card-bg);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .contact-card p,
+body.dark-mode .map-caption {
+  color: var(--text-muted);
+}

@@ -11,9 +11,6 @@
 </head>
 <body>
 
-  <!-- THEME BUTTON -->
-  <button id="themeToggle" class="theme-toggle">🌙</button>
-
   <section class="about-hero">
     <div class="hero-overlay"></div>
     <div class="about-hero-inner container">
