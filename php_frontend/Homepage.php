@@ -11,7 +11,7 @@
 <body>
 
 <!-- THEME BUTTON (only ONE body tag now) -->
-<button id="themeToggle" class="theme-toggle">🌙</button>
+<button id="themeToggle" class="theme-toggle">Toggle Theme</button>
 
 <section class="hero" style="
     height: 500px;

@@ -39,9 +39,10 @@ body.dark-mode textarea {
   background: var(--accent);
   border: none;
   color: white;
-  padding: 12px 14px;
-  border-radius: 50%;
-  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
   z-index: 999;
   transition: background var(--transition), transform var(--transition);
@@ -334,13 +335,58 @@ nav a:hover {
    FOOTER
 ========================================================= */
 
-footer {
+.site-footer {
   background: var(--bg-muted);
-  color: var(--text);
-  text-align: center;
-  padding: 40px 20px;
+  color: var(--text-muted);
+  padding: 50px 0;
   margin-top: 60px;
-  transition: background var(--transition);
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-about, .footer-links, .footer-social {
+  flex: 1;
+  min-width: 220px;
+}
+
+.site-footer h3 {
+  color: var(--text);
+  margin-bottom: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a, .footer-social a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover, .footer-social a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e2e2;
+}
+
+body.dark-mode .footer-bottom {
+  border-top-color: #30363d;
 }
 
 /* =========================================================
