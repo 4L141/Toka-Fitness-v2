@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using BCrypt.Net;
 using MySql.Data.MySqlClient;
@@ -40,6 +40,7 @@ namespace ConsoleBackend
             }
             catch (Exception ex)
             {
+                Logger.Log($"Error in Register: {ex.Message}");
                 return new Response { Status = "error", Message = ex.Message };
             }
         }
@@ -80,21 +81,18 @@ namespace ConsoleBackend
             }
             catch (Exception ex)
             {
+                Logger.Log($"Error in Login: {ex.Message}");
                 return new Response { Status = "error", Message = ex.Message };
             }
         }
 
-<<<<<<< HEAD
         // ------------------- GET USERS -------------------
-=======
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
         public static Response GetUsers()
         {
             try
             {
                 using (var conn = Database.GetConnection())
                 {
-<<<<<<< HEAD
                     var cmd = new MySqlCommand(
                         "SELECT user_id, first_name, last_name, email, is_admin FROM users",
                         conn);
@@ -111,24 +109,6 @@ namespace ConsoleBackend
                             LastName = reader.GetString("last_name"),
                             Email = reader.GetString("email"),
                             IsAdmin = reader.GetBoolean("is_admin")
-=======
-                    var cmd = new MySqlCommand("SELECT user_id, first_name, last_name, email, password, reg_date, is_admin FROM users", conn);
-                    var reader = cmd.ExecuteReader();
-
-                    var users = new List<Dictionary<string, object>>();
-
-                    while (reader.Read())
-                    {
-                        users.Add(new Dictionary<string, object>
-                        {
-                            { "user_id", reader["user_id"] },
-                            { "first_name", reader["first_name"] },
-                            { "last_name", reader["last_name"] },
-                            { "email", reader["email"] },
-                            { "password", reader["password"] },
-                            { "reg_date", reader["reg_date"] },
-                            { "is_admin", reader["is_admin"] }
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
                         });
                     }
 
@@ -136,33 +116,25 @@ namespace ConsoleBackend
                     {
                         Status = "success",
                         Message = "Users retrieved successfully",
-<<<<<<< HEAD
                         UsersList = users
-=======
-                        User = null,
-                        // add a new property in Response if needed (like UsersList)
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
                     };
                 }
             }
             catch (Exception ex)
             {
+                Logger.Log($"Error in GetUsers: {ex.Message}");
                 return new Response { Status = "error", Message = ex.Message };
             }
         }
 
-<<<<<<< HEAD
 
         // ------------------- UPDATE USER -------------------
-=======
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
         public static Response UpdateUser(Request req)
         {
             try
             {
                 using (var conn = Database.GetConnection())
                 {
-<<<<<<< HEAD
                     var cmd = new MySqlCommand(
                         "UPDATE users SET first_name=@first_name, last_name=@last_name, email=@email WHERE user_id=@user_id",
                         conn);
@@ -177,39 +149,23 @@ namespace ConsoleBackend
                     return rows > 0
                         ? new Response { Status = "success", Message = "User updated successfully" }
                         : new Response { Status = "error", Message = "No user found to update" };
-=======
-                    var cmd = new MySqlCommand("UPDATE users SET first_name=@first_name, last_name=@last_name, email=@email WHERE user_id=@id", conn);
-                    cmd.Parameters.AddWithValue("@first_name", req.first_name);
-                    cmd.Parameters.AddWithValue("@last_name", req.last_name);
-                    cmd.Parameters.AddWithValue("@email", req.email);
-                    cmd.Parameters.AddWithValue("@id", req.user_id);
-                    int rows = cmd.ExecuteNonQuery();
-
-                    if (rows > 0)
-                        return new Response { Status = "success", Message = "User updated successfully" };
-                    else
-                        return new Response { Status = "error", Message = "No user found to update" };
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
                 }
             }
             catch (Exception ex)
             {
+                Logger.Log($"Error in UpdateUser: {ex.Message}");
                 return new Response { Status = "error", Message = ex.Message };
             }
         }
 
-<<<<<<< HEAD
 
         // ------------------- DELETE USER -------------------
-=======
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
         public static Response DeleteUser(Request req)
         {
             try
             {
                 using (var conn = Database.GetConnection())
                 {
-<<<<<<< HEAD
                     var cmd = new MySqlCommand(
                         "DELETE FROM users WHERE user_id=@user_id", conn);
 
@@ -220,29 +176,13 @@ namespace ConsoleBackend
                     return rows > 0
                         ? new Response { Status = "success", Message = "User deleted successfully" }
                         : new Response { Status = "error", Message = "No user found to delete" };
-=======
-                    var cmd = new MySqlCommand("DELETE FROM users WHERE user_id=@id", conn);
-                    cmd.Parameters.AddWithValue("@id", req.user_id);
-                    int rows = cmd.ExecuteNonQuery();
-
-                    if (rows > 0)
-                        return new Response { Status = "success", Message = "User deleted successfully" };
-                    else
-                        return new Response { Status = "error", Message = "No user found to delete" };
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
                 }
             }
             catch (Exception ex)
             {
+                Logger.Log($"Error in DeleteUser: {ex.Message}");
                 return new Response { Status = "error", Message = ex.Message };
             }
-<<<<<<< HEAD
         }
-=======
-}
-
-
->>>>>>> fcdd6b0c7b7d32ac07069a4303ff68580ae3f795
-
     }
 }

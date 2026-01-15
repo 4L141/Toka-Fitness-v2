@@ -1,39 +1,13 @@
-<?php include 'header.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toka Fitness</title>
-  <link rel="stylesheet" href="Stylesheets/homestyles.css" />
-</head>
+<?php
+$pageTitle = 'Toka Fitness - Body & Mind';
+include 'header.php';
+?>
 
-<body>
-
-<!-- THEME BUTTON (only ONE body tag now) -->
-
-<section class="hero" style="
-    height: 500px;
-    background-image: url('Images/Image1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative;
-    padding: 40px;
-">
+<section class="hero-home">
   <div class="hero-text" style="text-align: center; z-index: 2;">
     <h1>BODY & MIND</h1>
     <p>Join thousands achieving their fitness goals with expert trainers, state-of-the-art facilities, and personalized programs.</p>
-    <a class="btn" href="#" style="
-        padding: 12px 25px;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-    ">Start Free Trial</a>
+    <a class="btn" href="#">Start Free Trial</a>
   </div>
 </section>
 
@@ -85,5 +59,3 @@
 	<script src="Scripts/Motivation.js"></script>
 
 <?php include 'footer.php'; ?>
-</body>
-</html>
