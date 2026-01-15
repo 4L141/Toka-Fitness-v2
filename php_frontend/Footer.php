@@ -25,3 +25,4 @@
     <p>&copy; 2023 Toka Fitness. All Rights Reserved.</p>
   </div>
 </footer>
+<script src="Scripts/theme.js"></script>

@@ -8,7 +8,7 @@
   <title>Toka Fitness – FAQ</title>
 
   <link rel="stylesheet" href="Stylesheets/homestyles.css" />
-  <link rel="stylesheet" href="faq.css" />
+  <link rel="stylesheet" href="Stylesheets/faq.css" />
 </head>
 <body>
 

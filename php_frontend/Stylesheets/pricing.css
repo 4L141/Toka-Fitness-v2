@@ -140,22 +140,36 @@
 }
 
 /* Dark mode refinements (works with your global .dark-mode) */
-.dark-mode .plan {
-  background: #15181c !important;
-  border-color: #2b333b !important;
-  color: #d6dbe0;
-  box-shadow: none;
+body.dark-mode .plan {
+  background: var(--card-bg);
+  border-color: #30363d;
 }
-.dark-mode .plan--popular {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+body.dark-mode .plan--popular {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border-color: var(--accent);
 }
-.dark-mode .compare-table thead th {
-  background: rgba(255,255,255,0.02);
+
+body.dark-mode .compare-table thead th {
+  background: rgba(255, 255, 255, 0.02);
 }
-.dark-mode .pricing-hero {
-  background: linear-gradient(120deg, rgba(6,12,18,0.92), rgba(13,20,28,0.92));
+
+body.dark-mode .compare-table td,
+body.dark-mode .features {
+  color: var(--text-muted);
 }
-.dark-mode .features li::before { color: #58a6ff; }
+
+body.dark-mode .pricing-hero {
+  background: linear-gradient(120deg, rgba(6, 12, 18, 0.92), rgba(13, 20, 28, 0.92));
+}
+
+body.dark-mode .features li::before {
+  color: var(--accent);
+}
+
+body.dark-mode .pricing-cta {
+    background: var(--bg-muted);
+}
 
 /* Responsive */
 @media (max-width: 980px) {

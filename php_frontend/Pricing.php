@@ -14,9 +14,6 @@
 </head>
 <body>
 
-  <!-- Theme toggle (if you don't have it globally in header) -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-
   <!-- Hero -->
   <section class="pricing-hero">
     <div class="container">
