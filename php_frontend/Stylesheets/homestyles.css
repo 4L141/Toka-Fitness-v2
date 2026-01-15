@@ -251,6 +251,20 @@ nav a:hover {
   margin-top: 10px;
 }
 
+.hero-home {
+    height: 500px;
+    background-image: url('../Images/Image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    padding: 40px;
+}
+
 /* =========================================================
    STATS
 ========================================================= */

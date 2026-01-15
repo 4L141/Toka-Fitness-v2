@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 mycursor.execute("CREATE DATABASE IF NOT EXISTS users")
-mycursor.execute("""CREATE TABLE IF NOT EXISTS users.user (
+mycursor.execute("""CREATE TABLE IF NOT EXISTS users.users (
 user_id INT UNSIGNED NOT NULL AUTO_INCREMENT ,
 first_name VARCHAR(20)NOT NULL,
 last_name VARCHAR(40)NOT NULL,
@@ -22,22 +22,21 @@ UNIQUE (email)
 )""")
 
 
-mycursor.execute("CREATE DATABASE IF NOT EXISTS users")
 mycursor.execute("""CREATE TABLE IF NOT EXISTS users.logs (
-user_id INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-email VARCHAR(60)NOT NULL,
+log_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+user_id INT UNSIGNED NOT NULL,
+email VARCHAR(60) NOT NULL,
 action VARCHAR(255) NOT NULL,
 timestamp DATETIME NOT NULL,
-PRIMARY KEY (user_id),
-UNIQUE (email)
+PRIMARY KEY (log_id),
+FOREIGN KEY (user_id) REFERENCES users.users(user_id)
 )""")
 
 
-mycursor.execute("CREATE DATABASE IF NOT EXISTS users")
 mycursor.execute("""CREATE TABLE IF NOT EXISTS users.analytics (
-user_id INT UNSIGNED NOT NULL AUTO_INCREMENT ,
-metric_name VARCHAR(60)NOT NULL,
+analytics_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+metric_name VARCHAR(60) NOT NULL,
 metric_value VARCHAR(255) NOT NULL,
 timestamp DATETIME NOT NULL,
-PRIMARY KEY (user_id)
+PRIMARY KEY (analytics_id)
 )""")

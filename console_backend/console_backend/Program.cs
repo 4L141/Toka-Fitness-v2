@@ -13,12 +13,12 @@ namespace ConsoleBackend
             {
                 using (var conn = Database.GetConnection())
                 {
-                    Console.WriteLine("Connection to MySQL successful!");
+                    Logger.Log("Connection to MySQL successful!");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Connection failed: " + ex.Message);
+                Logger.Log("Connection failed: " + ex.Message);
                 return; // Important fix
             }
 
@@ -34,7 +34,7 @@ namespace ConsoleBackend
 
             if (!File.Exists(inputPath))
             {
-                Console.WriteLine("Request file not found!");
+                Logger.Log("Request file not found!");
                 return;
             }
 
@@ -75,13 +75,13 @@ namespace ConsoleBackend
                 string jsonResponse = JsonConvert.SerializeObject(response, Formatting.Indented);
                 File.WriteAllText(outputPath, jsonResponse);
 
-                Console.WriteLine($"Processed {request.Action} successfully");
+                Logger.Log($"Processed {request.Action} successfully");
             }
             catch (Exception ex)
             {
+                Logger.Log("An error occurred: " + ex.Message);
                 var errorResponse = new Response { Status = "error", Message = ex.Message };
                 File.WriteAllText(outputPath, JsonConvert.SerializeObject(errorResponse, Formatting.Indented));
-                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
     }
