@@ -7,7 +7,7 @@
 
   <h2 class="logo">Toka Fitness</h2>
 
-  <nav class="center-nav">
+  <nav class="center-nav" id="nav-menu">
     <a href="Homepage.php">Home</a>
     
     <div class="dropdown">
